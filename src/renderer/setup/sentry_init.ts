@@ -1,3 +1,4 @@
+/*
 import * as Sentry from '@sentry/react'
 import platform from '../packages/platform'
 
@@ -28,3 +29,4 @@ import platform from '../packages/platform'
         release: version,
     })
 })()
+*/
