@@ -1,4 +1,4 @@
-import platform from '@/packages/platform'
+/*import platform from '@/packages/platform'
 
 ;(() => {
     try {
@@ -9,3 +9,4 @@ import platform from '@/packages/platform'
         console.error(e)
     }
 })();
+*/
