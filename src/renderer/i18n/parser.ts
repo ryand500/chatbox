@@ -1,7 +1,7 @@
 import { Language } from '../../shared/types'
 
 export function parseLocale(locale: string): Language {
-    if (
+    /*if (
         locale === 'zh' ||
         locale.startsWith('zh_CN') ||
         locale.startsWith('zh-CN') ||
@@ -28,12 +28,12 @@ export function parseLocale(locale: string): Language {
     }
     if (locale.startsWith('ru')) {
         return 'ru'
-    }
+    }*/
     if (locale.startsWith('de')) {
         return 'de'
-    }
+    }/*
     if (locale.startsWith('fr')) {
         return 'fr'
-    }
+    }*/
     return 'en'
 }
