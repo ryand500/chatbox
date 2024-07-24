@@ -11,7 +11,7 @@
 import os from 'os'
 import path from 'path'
 import { app, BrowserWindow, shell, ipcMain, nativeTheme, session, dialog } from 'electron'
-import { autoUpdater } from 'electron-updater'
+//import { autoUpdater } from 'electron-updater'
 import log from 'electron-log'
 import MenuBuilder from './menu'
 import { resolveHtmlPath } from './util'
@@ -19,7 +19,7 @@ import Locale from './locales'
 import { store, getConfig, getSettings } from './store-node'
 import * as proxy from './proxy'
 import * as fs from 'fs-extra'
-import * as analystic from './analystic-node'
+//import * as analystic from './analystic-node'
 import sanitizeFilename from 'sanitize-filename'
 
 if (process.platform === 'win32') {
@@ -134,7 +134,7 @@ const createWindow = async () => {
 
     // Remove this if your app does not use auto updates
     // eslint-disable-next-line
-    new AppUpdater()
+    //new AppUpdater()
 
     session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
         callback({
@@ -225,12 +225,12 @@ ipcMain.handle('relaunch', () => {
     app.quit()
 })
 
-ipcMain.handle('analysticTrackingEvent', (event, dataJson) => {
+/*ipcMain.handle('analysticTrackingEvent', (event, dataJson) => {
     const data = JSON.parse(dataJson)
     analystic.event(data.name, data.params).catch((e) => {
         log.error('analystic_tracking_event', e)
     })
-})
+})*/
 
 ipcMain.handle('getConfig', (event) => {
     return getConfig()
