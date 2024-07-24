@@ -5,7 +5,7 @@ import { Box, Grid } from '@mui/material'
 import SettingDialog from './pages/SettingDialog'
 import ChatConfigWindow from './pages/ChatConfigWindow'
 import CleanWidnow from './pages/CleanWindow'
-import AboutWindow from './pages/AboutWindow'
+//import AboutWindow from './pages/AboutWindow'
 import useAppTheme from './hooks/useAppTheme'
 import CopilotWindow from './pages/CopilotWindow'
 import { useI18nEffect } from './hooks/useI18nEffect'
@@ -23,7 +23,7 @@ function Main() {
 
     const [openSettingWindow, setOpenSettingWindow] = useAtom(atoms.openSettingDialogAtom)
 
-    const [openAboutWindow, setOpenAboutWindow] = React.useState(false)
+    //const [openAboutWindow, setOpenAboutWindow] = React.useState(false)
 
     const [openCopilotWindow, setOpenCopilotWindow] = React.useState(false)
 
@@ -32,7 +32,7 @@ function Main() {
             <Grid container className="h-full">
                 <Sidebar
                     openCopilotWindow={() => setOpenCopilotWindow(true)}
-                    openAboutWindow={() => setOpenAboutWindow(true)}
+                    //openAboutWindow={() => setOpenAboutWindow(true)}
                     setOpenSettingWindow={setOpenSettingWindow}
                 />
                 <MainPane />
@@ -42,7 +42,7 @@ function Main() {
                 targetTab={openSettingWindow || undefined}
                 close={() => setOpenSettingWindow(null)}
             />
-            <AboutWindow open={openAboutWindow} close={() => setOpenAboutWindow(false)} />
+            {/*<AboutWindow open={openAboutWindow} close={() => setOpenAboutWindow(false)} /> */}
             <ChatConfigWindow />
             <CleanWidnow />
             <CopilotWindow open={openCopilotWindow} close={() => setOpenCopilotWindow(false)} />
