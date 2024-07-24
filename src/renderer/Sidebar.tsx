@@ -31,13 +31,12 @@ export const drawerWidth = 240
 
 interface Props {
     openCopilotWindow(): void
-    openAboutWindow(): void
     setOpenSettingWindow(name: 'ai' | 'display' | null): void
 }
 
 export default function Sidebar(props: Props) {
     const { t } = useTranslation()
-    const versionHook = useVersion()
+    //const versionHook = useVersion()
 
     const sessionListRef = useRef<HTMLDivElement>(null)
     const handleCreateNewSession = () => {
@@ -72,7 +71,7 @@ export default function Sidebar(props: Props) {
                         <Box>
                             <a href="https://chatboxai.app" target="_blank">
                                 <img src={icon} className="w-8 h-8 mr-2 align-middle inline-block" />
-                                <span className="text-2xl align-middle inline-block">Chatbox</span>
+                                <span className="text-2xl align-middle inline-block">ChatHub</span>
                             </a>
                         </Box>
                         <Box></Box>
@@ -121,27 +120,6 @@ export default function Sidebar(props: Props) {
                             <Typography variant="body2" color="text.secondary">
                                 {/* ⌘N */}
                             </Typography>
-                        </MenuItem>
-
-                        <MenuItem onClick={props.openAboutWindow} sx={{ padding: '0.2rem 0.1rem', margin: '0.1rem' }}>
-                            <ListItemIcon>
-                                <IconButton>
-                                    <InfoOutlinedIcon fontSize="small" />
-                                </IconButton>
-                            </ListItemIcon>
-                            <ListItemText>
-                                <Badge
-                                    color="primary"
-                                    variant="dot"
-                                    invisible={!versionHook.needCheckUpdate}
-                                    sx={{ paddingRight: '8px' }}
-                                >
-                                    <Typography sx={{ opacity: 0.5 }}>
-                                        {t('About')}
-                                        {/\d/.test(versionHook.version) ? `(${versionHook.version})` : ''}
-                                    </Typography>
-                                </Badge>
-                            </ListItemText>
                         </MenuItem>
                     </MenuList>
                 </Stack>
