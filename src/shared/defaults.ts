@@ -12,7 +12,7 @@ export function settings(): Settings {
         azureDalleDeploymentName: 'dall-e-3',
         azureEndpoint: '',
         chatglm6bUrl: '',
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-4o',
         temperature: 0.7,
         topP: 1,
         // openaiMaxTokens: 0,
@@ -25,21 +25,24 @@ export function settings(): Settings {
         ollamaModel: '',
 
         showWordCount: true,
-        showTokenCount: false,
+        showTokenCount: true,
         showTokenUsed: true,
         showModelName: true,
-        showMessageTimestamp: false,
+        showMessageTimestamp: true,
         userAvatarKey: '',
         theme: Theme.FollowSystem,
         language: 'en',
-        fontSize: 12,
+        fontSize: 13,
         spellCheck: true,
 
         defaultPrompt: getDefaultPrompt(),
 
-        allowReportingAndTracking: true,
+        allowReportingAndTracking: false,
 
         enableMarkdownRendering: true,
+
+        // Add the default proxy setting
+        defaultProxy: 'http://proxy.wgs.wuerth.com:3128'
     }
 }
 
