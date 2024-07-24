@@ -6,7 +6,7 @@ import { getDefaultStore } from 'jotai'
 import platform from '@/packages/platform'
 import { settingsAtom } from '../stores/atoms'
 import Markdown from '@/components/Markdown'
-import { trackingEvent } from '@/packages/event'
+//import { trackingEvent } from '@/packages/event'
 
 const { useEffect, useState } = React
 
@@ -41,11 +41,11 @@ export default function RemoteDialogWindow() {
         checkRemoteDialog()
         setInterval(checkRemoteDialog, 1000 * 60 * 60 * 24)
     }, [])
-    useEffect(() => {
+    /*useEffect(() => {
         if (open) {
             trackingEvent('remote_dialog_window', { event_category: 'screen_view' })
         }
-    }, [open])
+    }, [open])*/
 
     const onClose = (event?: any, reason?: 'backdropClick' | 'escapeKeyDown') => {
         if (reason === 'backdropClick') {
