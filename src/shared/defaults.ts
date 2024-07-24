@@ -42,7 +42,7 @@ export function settings(): Settings {
         enableMarkdownRendering: true,
 
         // Add the default proxy setting
-        defaultProxy: 'http://proxy.wgs.wuerth.com:3128'
+        proxy: 'http://proxy.wgs.wuerth.com:3128'
     }
 }
 
