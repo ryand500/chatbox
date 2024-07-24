@@ -67,9 +67,9 @@ export default function Sidebar(props: Props) {
                 >
                     <Box className="flex justify-between items-center p-0 m-0 mx-2 mb-4">
                         <Box>
-                            <a href="https://chatboxai.app" target="_blank">
+                            <a href="#" target="_blank">
                                 <img src={icon} className="w-8 h-8 mr-2 align-middle inline-block" />
-                                <span className="text-2xl align-middle inline-block">Chatbox</span>
+                                <span className="text-2xl align-middle inline-block">ChatHub</span>
                                 <span className="text-2xl align-middle inline-block">ChatHub</span>
                             </a>
                         </Box>
