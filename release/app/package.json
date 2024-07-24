@@ -1,12 +1,12 @@
 {
-    "name": "xyz.chatboxapp.app",
-    "productName": "xyz.chatboxapp.app",
+    "name": "chathub.app",
+    "productName": "chathub.app",
     "version": "0.10.0",
-    "description": "A desktop client for multiple cutting-edge AI models",
+    "description": "A desktop client for Azure AI models",
     "author": {
-        "name": "Benn Huang",
-        "email": "tohuangbin@gmail.com",
-        "url": "https://github.com/Bin-Huang"
+        "name": "Unknown",
+        "email": "support@",
+        "url": "#"
     },
     "main": "./dist/main/main.js",
     "scripts": {
