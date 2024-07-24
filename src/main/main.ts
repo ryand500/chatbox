@@ -25,7 +25,7 @@ import sanitizeFilename from 'sanitize-filename'
 if (process.platform === 'win32') {
     app.setAppUserModelId(app.name)
 }
-
+/*
 class AppUpdater {
     constructor() {
         log.transports.file.level = 'info'
@@ -49,7 +49,7 @@ class AppUpdater {
         })
     }
 }
-
+*/
 let mainWindow: BrowserWindow | null = null
 
 if (process.env.NODE_ENV === 'production') {
